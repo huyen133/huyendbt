@@ -9,7 +9,7 @@
 
 {{ config(materialized='table') }}
 
-select wondaris_customer_id, customers__attribute_gender, customers__attribute_accountcode, customers__attribute_membershipstatus, customers__address_country, customers__attribute_loyaltyprogram from wndrs-shadowing-huyen.Wondaris_Test_CDP.wndrs__customers_1716871693 limit 999
+select wondaris_event_id, transactions__transaction_salesgross, transactions__transaction_salesgross,transactions__transaction_cost from wndrs-proprod-demo-clean-data.Wondaris_Test_CDP.wndrs__events_1716872833 limit 999
 
 /*
     Uncomment the line below to remove records with null `id` values
